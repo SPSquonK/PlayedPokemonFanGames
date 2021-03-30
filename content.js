@@ -371,7 +371,8 @@ const games = [
         player: "Marion",
         path: "BlueWhite_Marion.rxdata",
         living_dex: "Full",
-        pokemons: pokemons["Blue & White"]
+        pokemons: pokemons["Blue & White"],
+        comments: "https://gist.github.com/SPSquonK/98dbbc9745966eb387d8cdc3515273c7"
     },
     {
         game: "The Camry Legend 2",
