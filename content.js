@@ -131,7 +131,7 @@ const pokemons = {
             "Tony H4wk": { specie: "Lucario", form: "Omuran", sex: "Male" },
             "Jardinier": { specie: "Ursaring", form: "Omuran", sex: "Male" },
             // THE WARUDO
-            "Dio?!": { specie: "Celebi", form: "Omuran", icon: "Celebi" }
+            "Dio?!": { specie: "Celebi", form: "Omuran" }
         },
         "Océane": {
             // Primarina -> Lana -> Lana Rain
@@ -142,7 +142,7 @@ const pokemons = {
             "Mario": "Krookodile",
             "Bene": "Typhlosion",
             "Ariane": { specie: "Lucario", form: "Omuran" },
-            "Celebi": { specie: "Celebi", form: "Omuran", icon: "Celebi" }
+            "Celebi": { specie: "Celebi", form: "Omuran" }
             // + Skarm Crew and Zap as the reincarnation of the fallen ones
         }
     },
@@ -186,7 +186,8 @@ const pokemons = {
             // Refers to the tail
             "Fractale": "Espeon",
             // I wanted 5000 IQ but the Q key is glitched with control remapping.
-            "Super PC": { specie: "Metagross", battler: "Metagross_Mega_Soulstone", icon: "Metagross_Mega" }
+            "Super PC": { specie: "Metagross", battler: "Metagross_Mega_Soulstone", icon: "Metagross_Mega" },
+            "Cash Money": { specie: "Smeargle", battler: "Smeargle_Shiny", main: false }
         },
         Nier: {
             "Dragonite": { specie: "Gastrodon", form: "Gastronite", ignore_specie_name: true, icon: "Gastronite", battler: "Gastronite_Shiney" },
@@ -195,6 +196,10 @@ const pokemons = {
             "Kommo-o"  : { specie: "Gastrodon", form: "Gastro-o"  , ignore_specie_name: true, image: "Gastroo"   },
             "Hydreigon": { specie: "Gastrodon", form: "Gastreigon", ignore_specie_name: true, image: "Gastreigon" },
             "Altaria"  : { specie: "Gastrodon", form: "Altaradon" , ignore_specie_name: true, icon: "Altaradon", battler: "Altaradon_Shiney"  }
+        },
+        Misc: {
+            "Cristal" : { specie: "Venusaur", form: "Epoch" }
+            // "Shiron": { specie: "Ninteales", form : "Alola" } - relevant only during 2 battles
         }
     },
     Zero: {

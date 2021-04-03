@@ -2,3 +2,7 @@
 
 https://squonk.fr/pokemon/
 
+
+## Testing locally
+
+On windows: `python -m http.server`
