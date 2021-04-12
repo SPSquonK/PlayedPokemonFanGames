@@ -176,7 +176,15 @@ function addCount(icon, name, form, family, ignore_specie_name) {
         dict[n].push(icon);
     };
 
-    addOne(countMergedForms, family || name, icon);
+    function toBase(pkmn) {
+        if (families[pkmn] === undefined) {
+            return "$" + pkmn;
+        } else {
+            return families[pkmn];
+        }
+    }
+
+    addOne(countMergedForms, toBase(family || name), icon);
 
     if (form !== undefined) {
         if (ignore_specie_name) {
