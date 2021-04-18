@@ -268,6 +268,14 @@ const pokemons = {
         "The fast": { specie: "Slowbro", form: "Galar" },
         "Doggo": "Lucario",
         "Mewblue": "Manaphy"
+    },
+    SolarLight: {
+        "Salade": "Salaslam",   // Salade carried hard
+        "Buggy": "Casspring",
+        "Tiloup": "Werehide",
+        "Pownii": "Horshush",
+        "Titewaf": "Rushot",
+        "Tifan": "Elestomp"
     }
 };
 
@@ -445,5 +453,13 @@ const games = [
         date: "2021-04",
         pokemons: pokemons.SoulStone.Monoruns,
         path: "Soulstones/monoruns.html"
+    },
+    {
+        game: "Solar Light & Lunar Dark",
+        player: "Annie",
+        version: "V1.0.1",
+        date: "2021-04-17/18",
+        pokemons: pokemons.SolarLight,
+        path: "SolarLight.rxdata"
     }
 ];

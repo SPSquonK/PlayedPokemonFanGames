@@ -110,5 +110,13 @@ let families = {
     "Snowbreak": "Snopekor",
     "Halakik": "Halakik",
     "Zap Zap": "Zip zip",
-    "Vespyre": "Kuheat"
+    "Vespyre": "Kuheat",
+
+    // Solar Light & Lunar Dark
+    "Salaslam": "Salatad",
+    "Casspring": "Jumple",
+    "Werehide": "Beopup",
+    "Horshush": "Spony",
+    "Rushot": "Zuppy",
+    "Elestomp": "Rollie"
 }
