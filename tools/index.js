@@ -26,11 +26,18 @@ function main() {
                 choices: ['Spritesheet completer', 'Exit']
             },
             {
+                type: 'input',
+                name: 'gamename',
+                message: 'What is the game name? ',
+                when(answers) {
+                    return answers.menu === 'Spritesheet completer'
+                }
+            },
+            {
                 type: 'fuzzypath',
                 name: 'path',
-                message: 'Where is the game folder?',
+                message: 'Where is the game folder? ',
                 itemType: 'directory',
-                default: "B:\\JeuxPokemon\\Rejuvenation - V12",
                 excludeFilter: nodePath => nodePath == '.',
                 when(answers) {
                     return answers.menu === 'Spritesheet completer'
@@ -42,12 +49,12 @@ function main() {
                 const battlers = path.join(answers.path, "Graphics", "Battlers");
                 const icons = path.join(answers.path, "Graphics", "Icons");
 
-                spritesheetCompleterHandler(battlers, icons);
+                spritesheetCompleterHandler(answers.gamename, battlers, icons);
             }
         });
     }
 
-    function spritesheetCompleterHandler(battlers, icons) {
+    function spritesheetCompleterHandler(gamename, battlers, icons) {
         prompt([
             {
                 type: 'input',
@@ -58,11 +65,21 @@ function main() {
                 type: 'input',
                 name: 'number',
                 message: "Number (with eventually the form number)",
-                when(answers) { return answers.name !== ''; }
+                when(answers) {
+                    if (answers.name === undefined) return false;
+                    if (answers.name === '') return false;
+                    let c = answers.name;
+                    c = c.toUpperCase();
+                    return pokemonNames[c] === undefined;
+                }
             }
         ]).then(answers => {
             if (answers.name === '' || answers.name === undefined) {
                 mainMenu();
+            }
+            
+            if (pokemonNames[answers.name.toUpperCase()] !== undefined) {
+                answers.number = pokemonNames[answers.name.toUpperCase()];
             }
 
             if (answers.number[0] < '0' || answers.number[0] > '9') {
@@ -88,15 +105,21 @@ function main() {
 
             let iconPath = path.join(icons, "icon" + answers.number + ".png");
             if (!fs.existsSync(iconPath)) {
+                let pass = false;
+                if (answers.number[answers.number.length - 1] === "s") {
+                    answers.number = answers.number.substr(0, answers.number.length - 1);
+                    pass = true;
+                }
+
                 let without_ = answers.number.indexOf("_");
-                if (without_ === -1) {
+                if (without_ === -1 && !pass) {
                     console.log(iconPath + " does not exist");
                     return;
                 }
 
                 const oldPath = iconPath;
 
-                let newNumber = answers.number.substr(0, without_);
+                let newNumber = answers.number.substr(0, without_ !== -1 ? without_ : answers.number.length);
                 iconPath = path.join(icons, "icon" + newNumber + ".png");
                 if (!fs.existsSync(iconPath)) {
                     console.log(oldPath + " does not exist");
@@ -110,29 +133,21 @@ function main() {
             console.log(iconPath);
             
             spritesheetMaker(
-                spritesheetBattler.path,
-                spritesheetJson,
-                "battler",
-                battlerPath,
-                answers.name,
+                spritesheetBattler.path, spritesheetJson, "battler",
+                battlerPath, gamename + "/" + answers.name,
                 spritesheetBattler.size,
                 128,
                 2
             );
             
             spritesheetMaker(
-                spritesheetIcon.path,
-                spritesheetJson,
-                "icon",
-                iconPath,
-                answers.name,
-                spritesheetIcon.size,
-                128,
-                1
+                spritesheetIcon.path   , spritesheetJson, "icon",
+                iconPath   , gamename + "/" + answers.name,
+                spritesheetIcon.size   , 64, 1
             );
         })
         .catch(err => console.error(err))
-        .finally(() => spritesheetCompleterHandler(battlers, icons));
+        .finally(() => spritesheetCompleterHandler(gamename, battlers, icons));
     }
 
     mainMenu();

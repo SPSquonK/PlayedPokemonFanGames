@@ -1,0 +1,577 @@
+{
+  "@spritesize": {
+    "icon": 64,
+    "battler": 128
+  },
+  "Reborn/Sceptile-Mega": {
+    "icon": {
+      "slot": 0,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Swoobat": {
+    "battler": {
+      "slot": 1,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 1,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Magcargo": {
+    "battler": {
+      "slot": 2,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 2,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Ampharos-Mega": {
+    "battler": {
+      "slot": 3,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 3,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Pangoro": {
+    "battler": {
+      "slot": 4,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 4,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Rapidash": {
+    "battler": {
+      "slot": 5,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 5,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Typhlosion": {
+    "battler": {
+      "slot": 6,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 6,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Ninetales-Alola": {
+    "battler": {
+      "slot": 7,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 7,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Greninja": {
+    "battler": {
+      "slot": 8,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 8,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Primarina": {
+    "battler": {
+      "slot": 9,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 9,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Delphox": {
+    "battler": {
+      "slot": 10,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 10,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Alakazam": {
+    "battler": {
+      "slot": 11,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 11,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Girafarig": {
+    "battler": {
+      "slot": 12,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 12,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Gardevoir": {
+    "battler": {
+      "slot": 13,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 13,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Gallade": {
+    "battler": {
+      "slot": 14,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 14,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Metagross": {
+    "battler": {
+      "slot": 15,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 15,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Reborn/Slowbro": {
+    "battler": {
+      "slot": 16,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 16,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Venusaur-Delta-Mega": {
+    "battler": {
+      "slot": 17,
+      "width": 108,
+      "height": 96
+    },
+    "icon": {
+      "slot": 17,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Feraligatr-Mega": {
+    "battler": {
+      "slot": 18,
+      "width": 104,
+      "height": 96
+    },
+    "icon": {
+      "slot": 18,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Typhlosion-Mega": {
+    "battler": {
+      "slot": 19,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 19,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Ampharos": {
+    "battler": {
+      "slot": 20,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 20,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Metagross-Delta-Spider": {
+    "battler": {
+      "slot": 21,
+      "width": 100,
+      "height": 80
+    },
+    "icon": {
+      "slot": 21,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Metagross": {
+    "battler": {
+      "slot": 22,
+      "width": 91,
+      "height": 100
+    },
+    "icon": {
+      "slot": 22,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Insurgence/Gallade": {
+    "battler": {
+      "slot": 14,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 23,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Greninja": {
+    "battler": {
+      "slot": 23,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 8,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Talonflame": {
+    "battler": {
+      "slot": 24,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 24,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Nidoking": {
+    "battler": {
+      "slot": 25,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 25,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Lycanroc-Dusk": {
+    "battler": {
+      "slot": 26,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 26,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Zebstrika": {
+    "battler": {
+      "slot": 27,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 27,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Venusaur": {
+    "battler": {
+      "slot": 28,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 28,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Torkoal": {
+    "battler": {
+      "slot": 29,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 29,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Typhlosion": {
+    "battler": {
+      "slot": 6,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 30,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Ampharos": {
+    "battler": {
+      "slot": 20,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 20,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Kingdra": {
+    "battler": {
+      "slot": 30,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 31,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Flygon": {
+    "battler": {
+      "slot": 31,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 32,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Metagross": {
+    "battler": {
+      "slot": 15,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 22,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Ninetales-Alola": {
+    "battler": {
+      "slot": 7,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 7,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Zygarde-10": {
+    "battler": {
+      "slot": 32,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 33,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Hydreigon": {
+    "battler": {
+      "slot": 33,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 34,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Serperior": {
+    "battler": {
+      "slot": 34,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 35,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Cinccino": {
+    "battler": {
+      "slot": 35,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 36,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Espeon": {
+    "battler": {
+      "slot": 36,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 37,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Rapidash": {
+    "battler": {
+      "slot": 5,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 38,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Tyranitar": {
+    "battler": {
+      "slot": 37,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 39,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Vaporeon-Shiny": {
+    "battler": {
+      "slot": 38,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 40,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Rotom-Heat": {
+    "battler": {
+      "slot": 39,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 41,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Marowak-Alola": {
+    "battler": {
+      "slot": 40,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 42,
+      "width": 128,
+      "height": 64
+    }
+  },
+  "Rejuvenation/Krookodile": {
+    "battler": {
+      "slot": 41,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 43,
+      "width": 128,
+      "height": 64
+    }
+  }
+}
