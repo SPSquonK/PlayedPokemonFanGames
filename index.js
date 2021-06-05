@@ -55,7 +55,7 @@ class Pokemon$ {
             name = name.substr(0, name.length - "-Mega".length);
         }
 
-        const splitted = name.split("-");
+        const splitted = Pokemon$.unbreak(name.split("-"));
 
         if (splitted.length == 1) {
             return [splitted[0], null];
@@ -67,8 +67,24 @@ class Pokemon$ {
         }
     }
 
+    static unbreak(splitted) {
+        if (splitted.length < 2) return splitted;
+
+        let rebuild = (splitted[0] === "Ho" && splitted[1] === "Oh")
+            || (splitted[1] === "o") /* Jangmo-o and relatives (including Epoch Shellos) */;
+        
+        if (rebuild) {
+            return [splitted[0] + "-" + splitted[1], ...splitted.slice(2)];
+        } else {
+            return splitted;
+        }
+    }
+
     static getSpriteCss(spriteName) {
         let dict = spritesheets_json[spriteName];
+        if (dict === undefined) {
+            console.error(`${spriteName} has no entry`);
+        }
 
         let fields = [
             { name: 'icon'   , perRow: 12 }, 
@@ -233,9 +249,11 @@ for (let game of games) {
         game.path = game.history[game.history.length - 1].path;
     }
 
+    const spriteKey = game.sprite_key ? game.sprite_key : game.game;
+
     let content = {
         team: Object.keys(game.pokemons || {})
-                .map(key => newPokemon(game.pokemons[key], game.game))
+                .map(key => newPokemon(game.pokemons[key], spriteKey))
                 .filter(pokemon => pokemon.isMain())
                 .map(pokemon => pokemon.toHtmlIcon())
                 .join(''),
@@ -390,11 +408,14 @@ function main() {
     populateGames();
 
     for (const saveFile of games) {
+        
+        const spriteKey = saveFile.sprite_key ? saveFile.sprite_key : saveFile.game;
+
         if (saveFile["pokemons"] !== undefined) {
             addTeamDict(
                 saveFile["game"] + " - " + saveFile["player"],
                 saveFile["pokemons"],
-                saveFile.game
+                spriteKey
             );
         }
     }

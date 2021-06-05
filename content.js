@@ -33,49 +33,49 @@ const pokemons = {
         // more interesting to mega evolve a Pokemon able to sweep / a Hubris user
         // - Gallade also didn't mega evolve, because increasing Hypnosis precision was more interesting that increasing
         // its damages.
-        "FlowerPower": { specie: "Venusaur", form: "Delta", image: "Venusaur_Delta_Mega" },
-        "Jaw": { specie: "Feraligatr", image: "Feraligatr_Mega_Insurgence" },
-        "Inferno": { specie: "Typhlosion", image: "Typhlosion_Mega_Insurgence" },
+        "FlowerPower": { $: "Venusaur-Delta-Mega" },
+        "Jaw"        : { $: "Feraligatr-Mega"     },
+        "Inferno"    : { $: "Typhlosion-Mega"     },
         // Name refers to the fact that I did half of the game with only FP / Jaw / Inferno, so he is almost the chosen one
-        "The Fourth": "Ampharos",
+        "The Fourth" : { $: "Ampharos"            },
         // Found in a nest of Ariados, but he is the fifth party member
-        "Ariacinque": { specie: "Metagross", form: "Delta_Spider", image: "Metagross_DeltaSpider_Mega" },
+        "Ariacinque" : { $: "Metagross-Delta Spider-Mega" },
         // One of the reason why I played Insurgence is because I thought we could use Crystal form + Mega evolution in
         // the same fight, and also because I thought Metagross Delta Ruin Crystal was awesome. Metagross Delta Ruin is
         // unvailable the whole game, and is kind of bad, so rip.
         // "SixSixSix": { specie: "Metagross", form: "Delta_Ruin", image: "Metagross_DeltaRuin_Crystal", main: false },
         // Mainly for battle frontier. This Metagross was still kind of used, but no to the extent of the five mains
         // party members. And the real 6th party member was used a lot so he deserves some credits.
-        "Seventh Hvn": { specie: "Metagross", image: "Metagross_Mega", main: false },
+        "Seventh Hvn": { specie: "Metagross", main: false },
         // -- Trained but not really used in practice
         // "No Weakness": { specie: "Volcarona", form: "Delta", image: "Volcarona_Delta_Armored", main: false },
         // "Scaling Dog": { specie: "Arcanine": form: "Delta", image: "Arnanine_Delta", main: false },
         // And this is the real 6th party member, which actually was mostly acting on its own as a Pokemon Catcher / trainer
-        "The Voice": "Gallade"
+        "The Voice": { $: "Gallade" }
     },
     Rejuvenation: {
         Anna: {
             // All the following Pokemon actually had good usage
-            "Kuro Hàha": { specie: "Greninja", battler: "Greninja_Rejuvenation" },
-            "Bravest": { specie: "Talonflame", main: false, battler: "Smogonbird" },
-            "Niho Hahn": { specie: "Nidoking", main: true },
-            "Ouho Uhaf": { specie: "Lycanroc", main: false, image: "Lycanroc_Dusk" },
-            "The Bro": { specie: "Zebstrika", main: false },
+            "Kuro Hàha": { $: "Greninja" },
+            "Bravest"  : { $: "Talonflame", main: false},
+            "Niho Hahn": { $: "Nidoking", main: true },
+            "Ouho Uhaf": { $: "Lycanroc-Dusk", main: false },
+            "The Bro"  : { $: "Zebstrika", main: false },
             // Members of the Fuck Terrain Squad
-            "NastyFlower": "Venusaur" /* Grassy Terrain */,
-            "Fire Starter": "Torkoal" /* Sun to help Venusaur */,
-            "Err Upsion": "Typhlosion", /* If I have Grassy Terrain and Sun, I can just burn the world */
+            "NastyFlower" : { $: "Venusaur" } /* Grassy Terrain */,
+            "Fire Starter": { $: "Torkoal" } /* Sun to help Venusaur */,
+            "Err Upsion"  : { $: "Typhlosion" }, /* If I have Grassy Terrain and Sun, I can just burn the world */
             // Other pokemons
-            "Mouh Thon": "Ampharos",
+            "Mouh Thon":    { $: "Ampharos" },
             // Was supposed to be used with False Swipe + Yawn. Dropped the idea
             // "Blatoise": "Blastoise",
             // Late Game Cleaners
-            "TheRainMan": { specie: "Kingdra", main: false },
-            "TFW No Mega": { specie: "Flygon", main: false },
-            "Dataset": { specie: "Metagross", main: false },
-            "Pyrite": { specie: "Ninetales", form: "Alola", image: "Ninetales_Alola", main: false },
-            "Dogar": { specie: "Zygarde", form: "10%", image: "Zygarde_10", main: false },
-            "Trinity": { specie: "Hydreigon", main: false } /* Trained by Anna but mostly unused by her, used by Lillia */
+            "TheRainMan" : { $: "Kingdra"        , main: false },
+            "TFW No Mega": { $: "Flygon"         , main: false },
+            "Dataset"    : { $: "Metagross"      , main: false },
+            "Pyrite"     : { $: "Ninetales-Alola", main: false },
+            "Dogar"      : { $: "Zygarde-10"     , main: false },
+            "Trinity"    : { $: "Hydreigon"      , main: false } /* Trained by Anna but mostly unused by her, used by Lillia */
         },
         Lillia: {
             // Lillia was played with a set level cap to 85 on Hard Difficulty,
@@ -83,21 +83,21 @@ const pokemons = {
             // to use Anna's Pokemon using a SharedBox script.
             // AFAIR, Metagross, Kingdra and Hydreigon were the most used
             // Pokemon from Anna
-            "Snivy West": "Serperior",
+            "Snivy West": { $: "Serperior" },
             // Ok so why do I have two Talonflame: this one kept the Quick Guard
             // move to beat Yveltal.
-            "Guardian": { specie: "Talonflame", battler: "Smogonbird" },
-            "Flip Flap": "Cinccino",
-            "PewPew~": { specie: "Espeon", main: true },
-            "Front-end": { specie: "Rapidash", main: false },
-            "Tyrany": "Tyranitar",
-            "Aqua 404": { specie: "Vaporeon", battler: "Vaporeon_Shiney" },
+            "Guardian" : { $: "Talonflame", },
+            "Flip Flap": { $: "Cinccino" },
+            "PewPew~"  : { $: "Espeon"  , main: true },
+            "Front-end": { $: "Rapidash", main: false },
+            "Tyrany"   : { $: "Tyranitar" },
+            "Aqua 404" : { $: "Vaporeon-Shiny" },
             // Fire Squad, mostly unused
-            "Top Chef": { specie: "Rotom", form: "Heat", image: "Rotom_Heat", main: false },
-            "Beast Killer": { specie: "Marowak", form: "Alola", image: "Marowak_Alola", main: false },
+            "Top Chef" : { $: "Rotom-Heat", main: false },
+            "Beast Killer": { $: "Marowak-Alola", main: false },
             // Did you know that +6 Charizard still couldn't one shot some Pokemons ?
             // "Dragon Feu": { specie: "Charizard", main: false },
-            "Gang Master": { specie: "Krookodile", main: false },
+            "Gang Master": { $: "Krookodile", main: false },
         },
         Rounoi: {
             // Fighting avorted mono. Had to hack all the fighting starters
@@ -116,47 +116,42 @@ const pokemons = {
     "Empyrean": {
         "Anna": {
             // I'm a bit salty to have lost them
-            // Rox et Rouky
-            "Rox": { specie: "Delphox", battler: "Delphox_Mega_Empyrean", sex: "Male" },
-            // Discount Zapdos
-            "Zaptres": { specie: "Swellow", form: "Omuran", sex: "Female" },
-            // Discount Skarmory
-            "SKaRM CReW": { specie: "Honchkrow", form: "Omuran", sex: "Female" },
-            // Good / Bad
-            "Bad Riz": { specie: "Goodra", battler: "Goodra_Empyrean", sex: "Male", main: false },
-            "Tony H4wk": { specie: "Lucario", form: "Omuran", sex: "Male" },
-            "Jardinier": { specie: "Ursaring", form: "Omuran", sex: "Male" },
-            // THE WARUDO
-            "Dio?!": { specie: "Celebi", form: "Omuran" }
+            "Rox"       : { $: "Delphox-Mega"    , sex: "Male"   }, // Rox et Rouky
+            "Zaptres"   : { $: "Swellow-Omuran"  , sex: "Female" }, // Discount Zapdos
+            "SKaRM CReW": { $: "Honchkrow-Omuran", sex: "Female" }, // Discount Skarmory
+            "Bad Riz"   : { $: "Goodra", sex: "Male", main: false }, // Good / Bad
+            "Tony H4wk" : { $: "Lucario-Omuran"  , sex: "Male" },
+            "Jardinier" : { $: "Ursaring-Omuran" , sex: "Male" },
+            "Dio?!"     : { $: "Celebi-Dark"                   }    // THE WARUDO
         },
         "Océane": {
             // Primarina -> Lana -> Lana Rain
-            "Rain": { specie: "Primarina", battler: "Primarina_Mega_Empyrean" },
-            "Maximum": { specie: "Averat", main: false },
-            "Fulgur": { specie: "Machamp", form: "Omuran" },
-            "Laouni": { specie: "Mienshao", form: "Omuran", main: false },
-            "Mario": "Krookodile",
-            "Bene": "Typhlosion",
-            "Ariane": { specie: "Lucario", form: "Omuran" },
-            "Celebi": { specie: "Celebi", form: "Omuran" }
+            "Rain"   : { $: "Primarina-Mega" },
+            "Maximum": { $: "Averat"         , main: false },
+            "Fulgur" : { $: "Machamp-Omuran" },
+            "Laouni" : { $: "Mienshao-Omuran", main: false },
+            "Mario"  : { $: "Krookodile"     },
+            "Bene"   : { $: "Typhlosion"     },
+            "Ariane" : { $: "Lucario-Omuran" },
+            "Celebi" : { $: "Celebi-Dark"    }
             // + Skarm Crew and Zap as the reincarnation of the fallen ones
         }
     },
     Shield: {
-        "Cinderace": { specie: "Cinderace", battler: "Cinderace_Zero" },
-        "Rillaboom": "Rillaboom",
-        "Friday": "Blastoise",
-        "Slowbro": { specie: "Slowbro", form: "Galar" },
-        "Rapidash": { specie: "Rapidash", form: "Galar" },
-        "Shirai": "Krookodile" // Krookodile was actually a solo run
+        "Cinderace": { $: "Cinderace"      },
+        "Rillaboom": { $: "Rillaboom"      },
+        "Friday"   : { $: "Blastoise"      },
+        "Slowbro"  : { $: "Slowbro-Galar"  },
+        "Rapidash" : { $: "Rapidash-Galar" },
+        "Shirai"   : { $: "Krookodile"     } // Krookodile was actually a solo run
     },
     InfiniteFusion: {
         // Charizard name : DragonFeu. True starter is Charizard
 /* Charizard */ "DragonFeu": { specie: [ "Feraligatr", "Charizard" ], battler: "IF_Toto", icon: "Charizard_Feraligatr", main: false },
-        "Top%": { specie: "Rattatac", main: false, battler: "IF_Top" },
+        "Top%":  { $: "Raticate", main: false },
         // "King": { specie: "Nidoqueen", battler: "IF_King" }
-        "Queen": { specie: "Nidoking", battler: "IF_Queen" },
-        "Magic": { specie: "Alakazam", battler: "IF_Magie" },
+        "Queen": { $: "Nidoking" },
+        "Magic": { $: "Alakazam" },
 /* Gengar */ "Cui Cui": { specie: [ "Gengar", "Zapdos" ], battler: "IF_Cuicui", icon: "Gengar_Zapdos" },
 /* Gengar */ "Gen2": { specie: [ "Gengar", "Mewtwo" ], battler: "IF_Gen2", icon: "Gengar_Mewtwo" },
         // Her main purpose was to serve as a fusion for Brule, but Brule ended up
@@ -170,54 +165,52 @@ const pokemons = {
         // (Mewtwo) -> Gen2
         // (Gengar) -> Brule
         /* Catcheur was temporarly fused to Rayquaza but it was better to actually let it alone */
-        "Catcheur": { specie: "Scizor", battler: "IF_Catcheur", main: false },
+        "Catcheur": { $: "Scizor", main: false },
         "Kyurem": { specie: [ "Kyurem", "Reshiram", "Zekrom" ], battler: "IF_Kyurem", icon: "Kyurem_100" }
     },
     SoulStone: {
         Agathe: {
-            "Snowball": "Feraligatr",
-            "Bzzt": "Galvantula",
-            "BugCatcher": "Parasect",
-            "Le Roi": "Nidoking",
-            // Refers to the tail
-            "Fractale": "Espeon",
-            // I wanted 5000 IQ but the Q key is glitched with control remapping.
-            "Super PC": { specie: "Metagross", battler: "Metagross_Mega_Soulstone", icon: "Metagross_Mega" },
-            "Cash Money": { specie: "Smeargle", battler: "Smeargle_Shiny", main: false }
+            "Snowball"  : { $: "Feraligatr"     },
+            "Bzzt"      : { $: "Galvantula"     },
+            "BugCatcher": { $: "Parasect"       },
+            "Le Roi"    : { $: "Nidoking"       },
+            "Fractale"  : { $: "Espeon"         },  // Refers to the tail
+            "Super PC"  : { $: "Metagross-Mega" },  // I wanted 5000 IQ but the Q key is glitched with control remapping.
+            "Cash Money": { $: "Smeargle-Shiny", main: false }
         },
         Nier: {
-            "Dragonite": { specie: "Gastrodon", form: "Gastronite", ignore_specie_name: true, icon: "Gastronite", battler: "Gastronite_Shiney" },
-            "Drampa"   : { specie: "Gastrodon", form: "Gastrampa" , ignore_specie_name: true, image: "Gastrampa"  },
-            "Haxorus"  : { specie: "Gastrodon", form: "Haxodon"   , ignore_specie_name: true, image: "Haxodon"    },
-            "Kommo-o"  : { specie: "Gastrodon", form: "Gastro-o"  , ignore_specie_name: true, image: "Gastroo"   },
-            "Hydreigon": { specie: "Gastrodon", form: "Gastreigon", ignore_specie_name: true, image: "Gastreigon" },
-            "Altaria"  : { specie: "Gastrodon", form: "Altaradon" , ignore_specie_name: true, icon: "Altaradon", battler: "Altaradon_Shiney"  }
+            "Dragonite": { $: "Gastronite-Shiny" },
+            "Drampa"   : { $: "Gastrampa"        },
+            "Haxorus"  : { $: "Haxodon"          },
+            "Kommo-o"  : { $: "Gastro-o"         },
+            "Hydreigon": { $: "Gastreigon"       },
+            "Altaria"  : { $: "Altaradon-Shiny"  }
         },
         Monoruns: {
-/* Lillie */    "Cristal"   : {              specie: "Venusaur"  , form: "Epoch" },                              
-/* Lillie */ // "Shiron"    : { main: false, specie: "Ninteales" , form: "Alola" }, - relevant only during 2 battles
-/* Someone */   "Fishing"   : {              specie: "Gyarados"  , form: "Epoch" },               
-/* Vivi */      "Agenoux"   : {              specie: "Alakazam"  , form: "Epoch" },           
-/* Vivi */   // "Alakazam"  : { main: false, specie: "Alakazam"  , form: "Epoch" },   
-/* Broke */     "Captain"   : {              specie: "Kingler"   , form: "Epoch" },        
-/* Broke */     "Feros"     : { main: false, specie: "Rhydon"    , familiy: "Rhyperior" },
-/* Broke */     "Toc"       : { main: false, specie: "Rhyperior"  },
-/* Erika */     "Venufather": { main: true , specie: "Venusaur"   },
-/* Erika */     "LE SOLEIL" : { main: true , specie: "Victreebel", battler: "Victreebel_Mega_Soulstones", icon: "Victreebel_Mega_Soulstones" },
-/* Erika */     "Venuson"   : { main: false, specie: "Venusaur"   },
-/* Claire */    "Minidraco" : { main: true , specie: "Gastrodon" , form: "Gastronite", ignore_specie_name: true, icon: "Gastronite", battler: "Gastronite" },
-/* Claire */    "Hyporeine" : { main: false, specie: "Kingdra"    },
-/* Zerus */     "Coxy"      : { main: true , specie: "Ledian"     },
-/* Zerus */     "Beurre III": {              specie: "Butterfree" },
-/* Zerus */     "4 Heures"  : { main: false, specie: "Scyther"   , family: "Scizor" },
-/* Acerola */   "Blondie?!" : { main: true , specie: "Rapidash"  , form: "Epoch" },
-/* Acerola */   ":("        : { main: false, specie: "Chandelure" },
-/* Acerola */   ":>"        : { main: true , specie: "Dusknoir"  , form: "Epoch" },
-/* SquonK */    "M E T A"   : {              specie: "Metagross" , battler: "Metagross_Mega_Soulstone", icon: "Metagross_Mega" },
-/* SquonK */ // "Beldum"    : { main: false, specie: "Beldum" }
+/* Lillie */    "Cristal"   : {              $: "Venusaur-Epoch"  },
+/* Lillie */ // "Shiron"    : { main: false, $: "Ninetales-Alola" }, - relevant only during 2 battles
+/* Someone */   "Fishing"   : {              $: "Gyarados-Epoch"  },
+/* Vivi */      "Agenoux"   : {              $: "Alakazam-Epoch"  },
+/* Vivi */   // "Alakazam"  : { main: false, $: "Alakazam-Epoch"  },
+/* Broke */     "Captain"   : {              $: "Kingler-Epoch"   },
+/* Broke */     "Feros"     : { main: false, $: "Rhydon"          },
+/* Broke */     "Toc"       : { main: false, $: "Rhyperior"       },
+/* Erika */     "Venufather": { main: true , $: "Venusaur"        },
+/* Erika */     "LE SOLEIL" : { main: true , $: "Victreebel-Mega" },
+/* Erika */     "Venuson"   : { main: false, $: "Venusaur"        },
+/* Claire */    "Minidraco" : { main: true , $: "Gastronite"      },
+/* Claire */    "Hyporeine" : { main: false, $: "Kingdra"         },
+/* Zerus */     "Coxy"      : { main: true , $: "Ledian"          },
+/* Zerus */     "Beurre III": {              $: "Butterfree"      },
+/* Zerus */     "4 Heures"  : { main: false, $: "Scyther"         },
+/* Acerola */   "Blondie?!" : { main: true , $: "Rapidash-Epoch"  },
+/* Acerola */   ":("        : { main: false, $: "Chandelure"      },
+/* Acerola */   ":>"        : { main: true , $: "Dusknoir-Epoch"  },
+/* SquonK */    "M E T A"   : {              $: "Metagross-Mega"  },
+/* SquonK */ // "Beldum"    : { main: false, $: "Beldum" }
         },
         Kathleen: {
-            "Metagross": "Metagross" , "Smeargle": "Smeargle"
+            "Metagross": "Metagross" , "Smeargle": { $: "Smeargle" }
         },
         KaineWest: {
             // Trainer name:
@@ -226,77 +219,63 @@ const pokemons = {
             // V1.5 / Season 2: Nier. Kaine is one of the companion of Nier
             // - Obviously a pun with Kanye West
 
-            // Typhlosion learns Inferno -> Hell -> The Hell Song -> Sum 41
-            "Four Thx I": { specie: "Typhlosion", image: "Typhlosion_Mega_Soulstones" },
-            // ...
-            "Knuckles"  : { specie: "Excadrill"                                       },
-            // I somehow decided to refer to this group of 3 Magnemites as Magnemites (in french)
-            "Magnétis"  : { specie: "Magneton"                                        },
-            // MEEEEEGAAAAAAAAAA
-            "Méga"      : { specie: "Metagross" , battler: "Metagross_Mega_Soulstone", icon: "Metagross_Mega"},
-            // Marlène Schiappa
-            "Marlène"   : { specie: "Ampharos"  , main: false              },
-            // Noctali is Umbreon's french name, it is also the surname of Noctis in FF15
-            "Noc"       : { specie: "Umbreon"                              },
-            // Sounds like a dragon cry, mostly a reference to Sieur PC's stream
-            "Agrougrou" : { specie: "Charizard", image: "Charizard_Mega_Y" }
+            "Four Thx I": { $: "Typhlosion-Mega" },               // Typhlosion learns Inferno -> Hell -> The Hell Song -> Sum 41
+            "Knuckles"  : { $: "Excadrill"       },               // ...
+            "Magnétis"  : { $: "Magneton"        },               // I somehow decided to refer to this group of 3 Magnemites as Magnemites (in french)
+            "Méga"      : { $: "Metagross-Mega"  },               // MEEEEEGAAAAAAAAAA
+            "Marlène"   : { $: "Ampharos"        , main: false }, // Marlène Schiappa
+            "Noc"       : { $: "Umbreon"         },               // Noctali is Umbreon's french name, it is also the surname of Noctis in FF15
+            "Agrougrou" : { $: "Charizard-MegaY" }                // Sounds like a dragon cry, mostly a reference to Sieur PC's stream
         }
     },
     Zero: {
         // -- Adventure
         // Shell Smash
-        "Smash": { specie: "Blastoise", battler: "Blastoise_Mega_Zero", icon: "Blatoise_Mega" },
-        "Jean-Michel": { specie: "Parasect", battler: "Parasect_Zero" },
-        "La Tank": { specie: "Ampharos", battler: "Ampharos_Mega_Zero", icon: "Ampharos_Mega" },
-        "Donphan": { specie: "Donphan", battler: "Donphan_Zero", main: false },
-        "Venusaur": { specie: "Venusaur", battler: "Venusaur_Zero" },
-        "Metagross": { specie: "Metagross", battler: "Metagross_Mega_Zero", icon: "Metagross_Mega" },
+        "Smash"      : { $: "Blastoise-Mega" },
+        "Jean-Michel": { $: "Parasect"       },
+        "La Tank"    : { $: "Ampharos-Mega"  },
+        "Donphan"    : { $: "Donphan"        , main: false },
+        "Venusaur"   : { $: "Venusaur"       },
+        "Metagross"  : { $: "Metagross-Mega" },
         // -- Post game
-        "Playboy": { specie: "Cinderace", battler: "Cinderace_Zero", main: false },
+        "Playboy"    : { $: "Cinderace"      , main: false },
         // -- I used him instead of Metagross because I couldn't stand misses
-        "Gym Trainer": { specie: "Mewtwo", battler: "Mewtwo_Zero" }
+        "Gym Trainer": { $: "Mewtwo" }
     },
     "Blue & White": {
-        // It's written in his book.
-        "Alain": "Vespyre",
-        // Same kind of Pokemon as Omuran Swellow, so its nicknamed after his cousin.
-        "Zapquadro": { specie: "Zap Zap", image: "Zap_Zap" },
-        // Banana -> slip -> drift -> DEJA VU
-        "Initial D": "Halakik",
-        // Coon -> The Coon -> Mysterion -> Mysteria
-        "Mysteria": "Fircoon",
-        "Ouuh Ahaf": "Snowbreak",
-        // I'm sorry but I kind of don't want to flat out write Israel (or any
-        // real country beside France) on my website so I'll go with IL
-        "To the top": { specie: "Kabutops", form: "IL" }
+        "Alain"     : { $: "Vespyre"     }, // It's written in his book.
+        "Zapquadro" : { $: "Zap Zap"     }, // Same kind of Pokemon as Omuran Swellow, so its nicknamed after his cousin.
+        "Initial D" : { $: "Halakik"     }, // Banana -> slip -> drift -> DEJA VU
+        "Mysteria"  : { $: "Fircoon"     }, // Coon -> The Coon -> Mysterion -> Mysteria
+        "Ouuh Ahaf" : { $: "Snowbreak"   },
+        "To the top": { $: "Kabutops-IL" }
     },
     "The Camry Legend 2": {
-        "Final D": "Leafeon",
-        "Surprise": "Kricketune",
-        "Biatch": "Rapidash",
-        "Majo": "Mismagius",
-        "Fluff": "Altaria",
-        // It was basically a Surf slave
-        // "Jhin": "Slowking"
+        "Final D" : { $: "Leafeon"    },
+        "Surprise": { $: "Kricketune" },
+        "Biatch"  : { $: "Rapidash"   },
+        "Majo"    : { $: "Mismagius"  },
+        "Fluff"   : { $: "Altaria"    },
+        // "Jhin": "Slowking"   // It was basically a Surf slave
     },
     "Round": {
-        "Bowling": "Golem",
-        "Electrocute": {specie: "Magneton", family: "Magnezone" },
-        "Bouh": { specie: "Haunter", battler: "Haunter_Shiney", family: "Gengar" }
+        "Bowling"    : { $: "Golem" },
+        "Electrocute": { $: "Magneton" },
+        "Bouh"       : { $: "Haunter-Shiny" }
     },
     "Bushido": {
-        "Jungle": { specie: "Sceptile", image: "Sceptile_Bushido" },
-        "The fast": { specie: "Slowbro", form: "Galar" },
-        "Doggo": "Lucario",
-        "Mewblue": "Manaphy"
+        "Jungle"  : { $: "Sceptile"      },
+        "The fast": { $: "Slowbro-Galar" },
+        "Doggo"   : { $: "Lucario"       },
+        "Mewblue" : { $: "Manaphy"       }
     },
     SolarLight: {
-        "Salade": "Salaslam",   // Salade carried hard
-        "Buggy": "Casspring",
-        "Tiloup": "Werehide",
-        "Pownii": "Horshush",
-        "Titewaf": "Rushot",
-        "Tifan": "Elestomp"
+        "Salade" : { $: "Salaslam"  },   // Salade carried hard
+        "Buggy"  : { $: "Casspring" },
+        "Tiloup" : { $: "Werehide"  },
+        "Pownii" : { $: "Horshush"  },
+        "Titewaf": { $: "Rushot"    },
+        "Tifan"  : { $: "Elestomp"  }
     }
 };
 
@@ -353,6 +332,7 @@ const games = [
     },
     {
         game: "Shield",
+        sprite_key: "Zero",
         version: "",
         date: "2020-09",
         player: "Anna",
@@ -420,6 +400,7 @@ const games = [
     },
     {
         game: "Blue And White",
+        sprite_key: "Blue & White",
         version: "",
         date: "2021-02",
         player: "Marion",
@@ -440,6 +421,7 @@ const games = [
     },
     {
         game: "Round Edition - The Redux",
+        sprite_key: "Round Edition",
         version: "",
         date: "2021-02",
         player: "Cindy",

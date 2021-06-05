@@ -72,6 +72,14 @@ let families = {
     "Kricketune": "Kricketot",
     "Manaphy": "Manaphy",
     "Rotom": "Rotom",
+    
+    "Gastronite": "Shellos",
+    "Gastrampa": "Shellos",
+    "Haxodon": "Shellos",
+    "Gastro-o": "Shellos",
+    "Gastreigon": "Shellos",
+    "Altaradon": "Shellos",
+
 
     // Gen 5
     "Serperior": "Snivy",
