@@ -1,12 +1,12 @@
 {
   "@spritesize": {
-    "icon": 64,
+    "icon": 32,
     "battler": 128
   },
   "Reborn/Sceptile-Mega": {
     "icon": {
       "slot": 0,
-      "width": 128,
+      "width": 64,
       "height": 64
     },
     "battler": {
@@ -23,7 +23,7 @@
     },
     "icon": {
       "slot": 1,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -35,7 +35,7 @@
     },
     "icon": {
       "slot": 2,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -47,7 +47,7 @@
     },
     "icon": {
       "slot": 3,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -59,7 +59,7 @@
     },
     "icon": {
       "slot": 4,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -71,7 +71,7 @@
     },
     "icon": {
       "slot": 5,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -83,7 +83,7 @@
     },
     "icon": {
       "slot": 6,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -95,7 +95,7 @@
     },
     "icon": {
       "slot": 7,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -107,7 +107,7 @@
     },
     "icon": {
       "slot": 8,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -119,7 +119,7 @@
     },
     "icon": {
       "slot": 9,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -131,7 +131,7 @@
     },
     "icon": {
       "slot": 10,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -143,7 +143,7 @@
     },
     "icon": {
       "slot": 11,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -155,7 +155,7 @@
     },
     "icon": {
       "slot": 12,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -167,7 +167,7 @@
     },
     "icon": {
       "slot": 13,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -179,7 +179,7 @@
     },
     "icon": {
       "slot": 14,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -191,7 +191,7 @@
     },
     "icon": {
       "slot": 15,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -203,7 +203,7 @@
     },
     "icon": {
       "slot": 16,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -215,7 +215,7 @@
     },
     "icon": {
       "slot": 17,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -227,7 +227,7 @@
     },
     "icon": {
       "slot": 18,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -239,7 +239,7 @@
     },
     "icon": {
       "slot": 19,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -251,11 +251,11 @@
     },
     "icon": {
       "slot": 20,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
-  "Insurgence/Metagross-Delta-Spider": {
+  "Insurgence/Metagross-Delta Spider-Mega": {
     "battler": {
       "slot": 21,
       "width": 100,
@@ -263,7 +263,7 @@
     },
     "icon": {
       "slot": 21,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -275,7 +275,7 @@
     },
     "icon": {
       "slot": 22,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -287,7 +287,7 @@
     },
     "icon": {
       "slot": 23,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -299,7 +299,7 @@
     },
     "icon": {
       "slot": 8,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -311,7 +311,7 @@
     },
     "icon": {
       "slot": 24,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -323,7 +323,7 @@
     },
     "icon": {
       "slot": 25,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -335,7 +335,7 @@
     },
     "icon": {
       "slot": 26,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -347,7 +347,7 @@
     },
     "icon": {
       "slot": 27,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -359,7 +359,7 @@
     },
     "icon": {
       "slot": 28,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -371,7 +371,7 @@
     },
     "icon": {
       "slot": 29,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -383,7 +383,7 @@
     },
     "icon": {
       "slot": 30,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -395,7 +395,7 @@
     },
     "icon": {
       "slot": 20,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -407,7 +407,7 @@
     },
     "icon": {
       "slot": 31,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -419,7 +419,7 @@
     },
     "icon": {
       "slot": 32,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -431,7 +431,7 @@
     },
     "icon": {
       "slot": 22,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -443,7 +443,7 @@
     },
     "icon": {
       "slot": 7,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -455,7 +455,7 @@
     },
     "icon": {
       "slot": 33,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -467,7 +467,7 @@
     },
     "icon": {
       "slot": 34,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -479,7 +479,7 @@
     },
     "icon": {
       "slot": 35,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -491,7 +491,7 @@
     },
     "icon": {
       "slot": 36,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -503,7 +503,7 @@
     },
     "icon": {
       "slot": 37,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -515,7 +515,7 @@
     },
     "icon": {
       "slot": 38,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -527,7 +527,7 @@
     },
     "icon": {
       "slot": 39,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -539,7 +539,7 @@
     },
     "icon": {
       "slot": 40,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -551,7 +551,7 @@
     },
     "icon": {
       "slot": 41,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -563,7 +563,7 @@
     },
     "icon": {
       "slot": 42,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -575,7 +575,7 @@
     },
     "icon": {
       "slot": 43,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -587,8 +587,8 @@
     },
     "icon": {
       "slot": 44,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Zero/Rillaboom": {
@@ -599,8 +599,8 @@
     },
     "icon": {
       "slot": 45,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Zero/Blastoise": {
@@ -611,8 +611,8 @@
     },
     "icon": {
       "slot": 46,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Zero/Slowbro-Galar": {
@@ -623,8 +623,8 @@
     },
     "icon": {
       "slot": 47,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Zero/Rapidash": {
@@ -635,8 +635,8 @@
     },
     "icon": {
       "slot": 48,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Zero/Rapidash-Galar": {
@@ -647,8 +647,8 @@
     },
     "icon": {
       "slot": 49,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Zero/Krookodile": {
@@ -659,8 +659,8 @@
     },
     "icon": {
       "slot": 50,
-      "width": 80,
-      "height": 60
+      "width": 64,
+      "height": 64
     }
   },
   "Empyrean/Delphox-Mega": {
@@ -671,7 +671,7 @@
     },
     "icon": {
       "slot": 51,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -683,7 +683,7 @@
     },
     "icon": {
       "slot": 52,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -695,7 +695,7 @@
     },
     "icon": {
       "slot": 53,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -707,7 +707,7 @@
     },
     "icon": {
       "slot": 54,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -719,7 +719,7 @@
     },
     "icon": {
       "slot": 55,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -731,7 +731,7 @@
     },
     "icon": {
       "slot": 56,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -743,7 +743,7 @@
     },
     "icon": {
       "slot": 57,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -755,7 +755,7 @@
     },
     "icon": {
       "slot": 58,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -767,7 +767,7 @@
     },
     "icon": {
       "slot": 59,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -779,7 +779,7 @@
     },
     "icon": {
       "slot": 60,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -791,7 +791,7 @@
     },
     "icon": {
       "slot": 61,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -803,7 +803,7 @@
     },
     "icon": {
       "slot": 62,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -815,14 +815,14 @@
     },
     "icon": {
       "slot": 6,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
   "Infinite Fusion/Charizard+Feraligatr": {
     "icon": {
       "slot": 63,
-      "width": 124,
+      "width": 64,
       "height": 64
     },
     "battler": {
@@ -839,7 +839,7 @@
     },
     "icon": {
       "slot": 64,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -851,7 +851,7 @@
     },
     "icon": {
       "slot": 25,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -863,7 +863,7 @@
     },
     "icon": {
       "slot": 65,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -875,7 +875,7 @@
     },
     "icon": {
       "slot": 66,
-      "width": 124,
+      "width": 64,
       "height": 64
     }
   },
@@ -887,7 +887,7 @@
     },
     "icon": {
       "slot": 67,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -899,7 +899,7 @@
     },
     "icon": {
       "slot": 68,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -911,7 +911,7 @@
     },
     "icon": {
       "slot": 69,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -923,7 +923,7 @@
     },
     "icon": {
       "slot": 70,
-      "width": 128,
+      "width": 64,
       "height": 64
     }
   },
@@ -1368,7 +1368,7 @@
     "icon": {
       "slot": 105,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
   "Zero/Parasect": {
@@ -1380,7 +1380,7 @@
     "icon": {
       "slot": 106,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
   "Zero/Ampharos-Mega": {
@@ -1392,7 +1392,7 @@
     "icon": {
       "slot": 107,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
   "Zero/Donphan": {
@@ -1404,7 +1404,7 @@
     "icon": {
       "slot": 108,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
   "Zero/Venusaur": {
@@ -1416,10 +1416,10 @@
     "icon": {
       "slot": 109,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
-  "Zero/Megagross": {
+  "Zero/Metagross-Mega": {
     "battler": {
       "slot": 112,
       "width": 96,
@@ -1428,7 +1428,7 @@
     "icon": {
       "slot": 110,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
   "Zero/Mewtwo": {
@@ -1440,7 +1440,7 @@
     "icon": {
       "slot": 111,
       "width": 64,
-      "height": 60
+      "height": 64
     }
   },
   "Blue & White/Vespyre": {

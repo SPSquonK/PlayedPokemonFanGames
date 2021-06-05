@@ -1,4 +1,11 @@
 
+    function toBase(pkmn) {
+        if (families[pkmn] === undefined) {
+            return "$" + pkmn;
+        } else {
+            return families[pkmn];
+        }
+    }
 
 function makeElementForSprite(spriteUrl) {
     return `<span class="sprite"><img src="icons/${spriteUrl}.png"></span>`;
@@ -39,6 +46,107 @@ let app = new Vue({
 // =============================================================================
 // =============================================================================
 // =============================================================================
+
+let spritesheets_json = null;
+
+class Pokemon$ {
+    static decompose(name) {
+        if (name.endsWith("-Mega")) {
+            name = name.substr(0, name.length - "-Mega".length);
+        }
+
+        const splitted = name.split("-");
+
+        if (splitted.length == 1) {
+            return [splitted[0], null];
+        } else if (splitted.length == 2) {
+            return splitted;
+        } else {
+            console.error(name + " has more than 2 parts");
+            return splitted.slice(0, 2);
+        }
+    }
+
+    static getSpriteCss(spriteName) {
+        let dict = spritesheets_json[spriteName];
+
+        let fields = [
+            { name: 'icon'   , perRow: 12 }, 
+            { name: 'battler', perRow:  6 }
+        ];
+
+        let result = {};
+
+        for (const field of fields) {
+            let thisDict = dict[field.name];
+            let x =           (thisDict.slot % field.perRow) * spritesheets_json['@spritesize'][field.name];
+            let y = Math.floor(thisDict.slot / field.perRow) * spritesheets_json['@spritesize'][field.name];
+
+            result[field.name] = {
+                x, y, width: thisDict.width, height: thisDict.height
+            };
+        }
+
+        result.icon.width = 32;
+        result.icon.height = 32;
+
+        return result;
+    }
+
+    constructor(dict, game) {
+        this.main = dict.main !== false;
+
+        if (spritesheets_json === null) {
+            throw Error(
+                "A Pokemon$ should not never be instancied"
+                + "before spritesheets_json is loaded"
+            );
+        }
+
+        if (dict.$.indexOf("+") !== -1) {
+            throw Error("Composed Pokemon$ are not yet supported");
+        }
+
+        const [specie, regionalForm] = Pokemon$.decompose(dict.$);
+
+        this.specie = specie;
+        this.regionalForm = regionalForm;
+
+        const spriteKey = game + "/" + dict.$;
+        this.sprites = Pokemon$.getSpriteCss(spriteKey);
+
+        this.components = [this];
+    }
+
+    isMain() { return this.main; }
+
+    toHtmlIcon() {
+        let style = "background-position: -" + (this.sprites.icon.x) + "px ";
+        style += " -" + (this.sprites.icon.y) + "px;";
+        return `<div class="iconSprite" style="${style}"></div>`
+    }
+
+    toHtmlBattler() {
+        let style = "background-position: -" + (this.sprites.battler.x) + "px ";
+        style += " -" + (this.sprites.battler.y) + "px;";
+        style += ` width: ${this.sprites.battler.width}px;   min-width: ${this.sprites.battler.width}px; `
+        style += ` height: ${this.sprites.battler.height}px; min-height: ${this.sprites.battler.height}px; `
+        return `<div class="battlerSprite" style="${style}"></div>`
+    }
+
+    getIndividualSpecies() { return this.components; }
+    
+
+    getFamily() { return toBase(this.specie); }
+
+    getFullSpecie() {
+        if (this.regionalForm != null) {
+            return this.specie + "-" + this.regionalForm;
+        } else {
+            return this.specie;
+        }
+    }
+}
 
 class Pokemon {
     constructor(content) {
@@ -104,14 +212,19 @@ class Pokemon {
             return [this];
         }
     }
+}
 
+function newPokemon(dict, game) {
+    if (dict.$ !== undefined) return new Pokemon$(dict, game);
+    else return new Pokemon(dict);
 }
 
 
 
 
-
 // Populate the list
+
+function populateGames() {
 
 for (let game of games) {
     if (game.history !== undefined) {
@@ -122,7 +235,7 @@ for (let game of games) {
 
     let content = {
         team: Object.keys(game.pokemons || {})
-                .map(key => new Pokemon(game.pokemons[key]))
+                .map(key => newPokemon(game.pokemons[key], game.game))
                 .filter(pokemon => pokemon.isMain())
                 .map(pokemon => pokemon.toHtmlIcon())
                 .join(''),
@@ -180,6 +293,7 @@ for (let game of games) {
 }
 
 
+}
 
 // =============================================================================
 // =============================================================================
@@ -192,22 +306,22 @@ for (let game of games) {
 let count = {};
 let countMergedForms = {};
 
+let addOne = (dict, n, icon) => {
+    if (dict[n] === undefined) {
+        dict[n] = [];
+    }
+    
+    dict[n].push(icon);
+};
+
 function addCount(icon, name, form, family, ignore_specie_name) {
-    let addOne = (dict, n, icon) => {
-        if (dict[n] === undefined) {
-            dict[n] = [];
+    let x = icon;
+    icon = {
+        toHtmlIcon: function() {
+            return makeElementForSprite(x);
         }
-        
-        dict[n].push(icon);
     };
 
-    function toBase(pkmn) {
-        if (families[pkmn] === undefined) {
-            return "$" + pkmn;
-        } else {
-            return families[pkmn];
-        }
-    }
 
     addOne(countMergedForms, toBase(family || name), icon);
 
@@ -222,16 +336,29 @@ function addCount(icon, name, form, family, ignore_specie_name) {
     addOne(count, name, icon);
 }
 
-function addTeamDict(title, team) {
+function addTeamDict(title, team, game) {
     let x = [];
     for (let pokemonSurname in team) {
-        let pkmn = new Pokemon(team[pokemonSurname]);
+        let pkmn = newPokemon(team[pokemonSurname], game);
 
-        x.push(pkmn.battler);
+        if (pkmn instanceof Pokemon$) {
+            x.push(pkmn);
+        } else {
+            x.push({
+                toHtmlBattler: function() {
+                    return `<img src="image/${pkmn.battler}.png">`;
+                }
+            });
+        }
 
         for (let specie of pkmn.getIndividualSpecies()) {
-            let c = specie.content;
-            addCount(specie.icon, specie.specie, c.form, c.family, c.ignore_specie_name);
+            if (specie instanceof Pokemon$) {
+                addOne(countMergedForms, specie.getFamily()    , specie);
+                addOne(count           , specie.getFullSpecie(), specie);
+            } else {
+                let c = specie.content;
+                addCount(specie.icon, specie.specie, c.form, c.family, c.ignore_specie_name);
+            }
         }
     }
 
@@ -260,11 +387,14 @@ function fillCounts() {
 }
 
 function main() {
+    populateGames();
+
     for (const saveFile of games) {
         if (saveFile["pokemons"] !== undefined) {
             addTeamDict(
                 saveFile["game"] + " - " + saveFile["player"],
-                saveFile["pokemons"]
+                saveFile["pokemons"],
+                saveFile.game
             );
         }
     }
@@ -272,4 +402,11 @@ function main() {
     fillCounts();
 }
 
-main();
+$.ajax({
+    url: 'assets/spritesheets.json',
+
+    success: function(json) {
+        spritesheets_json = json;
+        main();
+    }
+});

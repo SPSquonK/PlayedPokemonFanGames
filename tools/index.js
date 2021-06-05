@@ -153,7 +153,7 @@ function main() {
             spritesheetMaker(
                 spritesheetIcon.path   , spritesheetJson, "icon",
                 iconPath   , gamename + "/" + answers.name,
-                spritesheetIcon.size   ,  64, 1
+                spritesheetIcon.size   ,  32, 2
             );
         })
         .catch(err => console.error(err))

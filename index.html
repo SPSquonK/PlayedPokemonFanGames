@@ -62,7 +62,7 @@
 			<table id="teams" style="width: 800px;">
 				<tbody v-for="team in teams">
 					<tr><th>{{team.title}}</th></tr>
-					<tr><td><img v-for="member in team.party" v-bind:src="'image/' + member + '.png'"></td></tr> <!-- image/{{.}}.png -->
+					<tr><td><span v-for="member in team.party" v-html:src="member.toHtmlBattler()"></span></td></tr>
 				</tbody>
 			</table>
 			
@@ -89,7 +89,7 @@
 					<td>{{ oneCount.name }}</td>
 					<td>{{ oneCount.individuals.length }}</td>
 					<td>
-						<span v-for="individual in oneCount.individuals" v-html="spriteFor(individual)"></span>
+						<span v-for="individual in oneCount.individuals" v-html="individual.toHtmlIcon()"></span>
 					</td>
 				</tr>
 			</table>
@@ -133,6 +133,10 @@
 
 
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"></script>
 
 		<script type="text/javascript" src="pokemon_families.js"></script>
 		<script type="text/javascript" src="content.js"></script>

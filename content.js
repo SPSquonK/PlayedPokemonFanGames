@@ -4,30 +4,26 @@ const pokemons = {
     // Commentated = Trained but either unused because end of the game or was bad or anything
     Reborn: {
         Anna: {
-            // Every name refers to a friend (if we suppose that I'm a friend of myself)
-            "JuJu": { specie: "Sceptile", image: "Sceptile_Mega" },
-            "Sguel": { specie: "Swoobat", main: false },
-            "Vignefranche": { specie: "Magcargo" },
-            "Big Mac": { specie: "Ampharos", image: "Ampharos_Mega"},
-            "Stehpen": { specie: "Pangoro", main: false },
-            "Blondie": { specie: "Rapidash", main: false } /* Not sure if I should give the last main slot to her or Pietro */, 
-            "VValid": "Typhlosion",
-            "Maléfice": { specie: "Ninetales", form: "Alola", image: "Ninetales_Alola", main: false },
-            "JoJo": { specie: "Greninja", battler: "Greninja_Reborn" },
-            "Pietro": "Primarina",
-            // -- Not actually used pokemons
-            // "Rice Soul": "Serperior"
-            // "Bocal": "Naganadel"
-            // "Lulu": "Flygon"
+            // Not sure if I should give the last main slot to Blondie or Pietro
+            "JuJu"        : { $: "Sceptile-Mega"  },
+            "Sguel"       : { $: "Swoobat"        , main: false },
+            "Vignefranche": { $: "Magcargo"       },
+            "Big Mac"     : { $: "Ampharos-Mega"  },
+            "Stehpen"     : { $: "Pangoro"        , main: false },
+            "Blondie"     : { $: "Rapidash"       , main: false },
+            "VValid"      : { $: "Typhlosion"     },
+            "Maléfice"    : { $: "Ninetales-Alola", main: false },
+            "JoJo"        : { $: "Greninja"       },
+            "Pietro"      : { $: "Primarina"      }
         },
         Agathe: {
-            "Burnout": "Delphox",           // Burnout 3
-            "El magiciano": "Alakazam",
-            "A girafe": { specie: "Girafarig", main: false },
-            "Waifu": "Gardevoir",
-            "Husbando": "Gallade",
-            "Deus Ex": "Metagross",         // Machina
-            "Fast Sis": "Slowbro"
+            "Burnout"     : { $: "Delphox"   }, // Burnout 3
+            "El magiciano": { $: "Alakazam"  },
+            "A girafe"    : { $: "Girafarig", main: false },
+            "Waifu"       : { $: "Gardevoir" },
+            "Husbando"    : { $: "Gallade"   },
+            "Deus Ex"     : { $: "Metagross" }, // Machina
+            "Fast Sis"    : { $: "Slowbro"   }
         }
     },
     Insurgence: {

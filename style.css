@@ -39,6 +39,23 @@ h2 {
     height: 32px;
 }
 
+div.iconSprite {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    background: url('assets/icons.png') no-repeat;
+    image-rendering: crisp-edges;
+}
+
+
+div.battlerSprite {
+    display: inline-block;
+    background: url('assets/battlers.png') no-repeat;
+    /* image-rendering: crisp-edges; */
+}
+
 #teams { margin: auto; }
 #teams th { background-color: black; color : white; }
 #teams td { background-color: white; }
