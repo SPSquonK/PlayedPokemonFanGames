@@ -267,18 +267,6 @@
       "height": 64
     }
   },
-  "Insurgence/Metagross": {
-    "battler": {
-      "slot": 22,
-      "width": 91,
-      "height": 100
-    },
-    "icon": {
-      "slot": 22,
-      "width": 64,
-      "height": 64
-    }
-  },
   "Insurgence/Gallade": {
     "battler": {
       "slot": 14,
@@ -1729,6 +1717,18 @@
       "slot": 133,
       "width": 64,
       "height": 64
+    }
+  },
+  "Insurgence/Metagross-Mega": {
+    "battler": {
+      "slot": 22,
+      "width": 91,
+      "height": 100
+    },
+    "icon": {
+      "slot": 134,
+      "width": 32,
+      "height": 32
     }
   }
 }

@@ -34,7 +34,7 @@ let families = {
     "Espeon": "Eevee",
     "Umbreon": "Eevee",
     "Leafeon": "Eevee",
-    "Rattatac": "Rattata",
+    "Raticate": "Rattata",
 
     "Zapdos": "Zapdos",
     "Mewtwo": "Mewtwo",
@@ -72,7 +72,7 @@ let families = {
     "Kricketune": "Kricketot",
     "Manaphy": "Manaphy",
     "Rotom": "Rotom",
-    
+
     "Gastronite": "Shellos",
     "Gastrampa": "Shellos",
     "Haxodon": "Shellos",

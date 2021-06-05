@@ -46,7 +46,7 @@ const pokemons = {
         // "SixSixSix": { specie: "Metagross", form: "Delta_Ruin", image: "Metagross_DeltaRuin_Crystal", main: false },
         // Mainly for battle frontier. This Metagross was still kind of used, but no to the extent of the five mains
         // party members. And the real 6th party member was used a lot so he deserves some credits.
-        "Seventh Hvn": { specie: "Metagross", main: false },
+        "Seventh Hvn": { $: "Metagross-Mega", main: false },
         // -- Trained but not really used in practice
         // "No Weakness": { specie: "Volcarona", form: "Delta", image: "Volcarona_Delta_Armored", main: false },
         // "Scaling Dog": { specie: "Arcanine": form: "Delta", image: "Arnanine_Delta", main: false },
@@ -147,26 +147,26 @@ const pokemons = {
     },
     InfiniteFusion: {
         // Charizard name : DragonFeu. True starter is Charizard
-/* Charizard */ "DragonFeu": { specie: [ "Feraligatr", "Charizard" ], battler: "IF_Toto", icon: "Charizard_Feraligatr", main: false },
+/* Charizard */ "DragonFeu": { $: "Charizard+Feraligatr", main: false },
         "Top%":  { $: "Raticate", main: false },
         // "King": { specie: "Nidoqueen", battler: "IF_King" }
         "Queen": { $: "Nidoking" },
         "Magic": { $: "Alakazam" },
-/* Gengar */ "Cui Cui": { specie: [ "Gengar", "Zapdos" ], battler: "IF_Cuicui", icon: "Gengar_Zapdos" },
-/* Gengar */ "Gen2": { specie: [ "Gengar", "Mewtwo" ], battler: "IF_Gen2", icon: "Gengar_Mewtwo" },
+/* Gengar */ "Cui Cui": { $: "Gengar+Zapdos"},
+/* Gengar */ "Gen2"   : { $: "Gengar+Mewtwo" },
         // Her main purpose was to serve as a fusion for Brule, but Brule ended up
         // possessed by a 3rd Gengar after seeing that the Typhlosion - Ninetales
         // cooperation wasn't bringing good results
-        // "Leona": { specie: "Ninetales", battler: "IF_Leona" },
+        // "Leona": { $: "Ninetales", battler: "IF_Leona" },
         // Brule is actually Typhlosion's name.
-/* Typhlosion */ "Brule": { specie: [ "Typhlosion", "Gengar" ], battler: "IF_Brule", icon: "Typhlosion_Gengar" },
+/* Typhlosion */ "Brule": { $: "Gengar+Typhlosion" },
         // (Zapdos) -> Cuicui
         // (Feraligatr) (Toto) -> DragonFeu
         // (Mewtwo) -> Gen2
         // (Gengar) -> Brule
         /* Catcheur was temporarly fused to Rayquaza but it was better to actually let it alone */
         "Catcheur": { $: "Scizor", main: false },
-        "Kyurem": { specie: [ "Kyurem", "Reshiram", "Zekrom" ], battler: "IF_Kyurem", icon: "Kyurem_100" }
+        "Kyurem"  : { $: "Kyurem-Complete" }
     },
     SoulStone: {
         Agathe: {

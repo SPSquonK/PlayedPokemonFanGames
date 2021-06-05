@@ -51,8 +51,16 @@ let spritesheets_json = null;
 
 class Pokemon$ {
     static decompose(name) {
+        const isShiny = name.indexOf("-Shiny");
+        if (isShiny !== -1) {
+            name = name.substr(0, isShiny) + name.substr(isShiny + "-Shiny".length);
+        }
+
         if (name.endsWith("-Mega")) {
             name = name.substr(0, name.length - "-Mega".length);
+        } else if (name.endsWith("-MegaX") || name.endsWith("-MegaY")) {
+            // Charizard / Mewtwo
+            name = name.substr(0, name.length - "-MegaX".length);
         }
 
         const splitted = Pokemon$.unbreak(name.split("-"));
@@ -119,19 +127,19 @@ class Pokemon$ {
             );
         }
 
-        if (dict.$.indexOf("+") !== -1) {
-            throw Error("Composed Pokemon$ are not yet supported");
+        this.sprites = Pokemon$.getSpriteCss(game + "/" + dict.$);
+
+        if (dict.$.indexOf("+") === -1) {
+            // Kyurem-Complete not being counted as a fusion is deliberate
+            const [specie, regionalForm] = Pokemon$.decompose(dict.$);
+            this.specie = specie;
+            this.regionalForm = regionalForm;
+            this.components = [specie + (regionalForm === null ? "" : "-" + regionalForm)];
+        } else {
+            this.specie = dict.$.split("+").join(" / ");
+            this.regionalForm = null;
+            this.components = dict.$.split("+");
         }
-
-        const [specie, regionalForm] = Pokemon$.decompose(dict.$);
-
-        this.specie = specie;
-        this.regionalForm = regionalForm;
-
-        const spriteKey = game + "/" + dict.$;
-        this.sprites = Pokemon$.getSpriteCss(spriteKey);
-
-        this.components = [this];
     }
 
     isMain() { return this.main; }
@@ -145,98 +153,19 @@ class Pokemon$ {
     toHtmlBattler() {
         let style = "background-position: -" + (this.sprites.battler.x) + "px ";
         style += " -" + (this.sprites.battler.y) + "px;";
-        style += ` width: ${this.sprites.battler.width}px;   min-width: ${this.sprites.battler.width}px; `
+        style += ` width:  ${this.sprites.battler.width}px;  min-width:  ${this.sprites.battler.width}px; `
         style += ` height: ${this.sprites.battler.height}px; min-height: ${this.sprites.battler.height}px; `
         return `<div class="battlerSprite" style="${style}"></div>`
     }
 
-    getIndividualSpecies() { return this.components; }
-    
-
-    getFamily() { return toBase(this.specie); }
-
-    getFullSpecie() {
-        if (this.regionalForm != null) {
-            return this.specie + "-" + this.regionalForm;
-        } else {
-            return this.specie;
-        }
-    }
-}
-
-class Pokemon {
-    constructor(content) {
-        this.content = content;
-
-        if (typeof content === 'string' || content instanceof String) {
-            this.main    = true;
-
-            this.icon    = content;
-            this.battler = content;
-            this.specie  = content;
-        } else {
-            this.main    = content.main !== false;
-            this.specie  = content.specie;
-
-            if (content.image !== undefined) {
-                this.icon    = content.image;
-                this.battler = content.image;
-            } else {
-                let url = content.specie;
-                if (url !== undefined && content.form !== undefined) {
-                    url += "_" + this.content.form;
-                }
-
-                this.icon = url;
-                this.battler = url;
-            }
-
-            if (content.icon !== undefined) {
-                this.icon = content.icon;
-            }
-
-            if (content.battler !== undefined) {
-                this.battler = content.battler;
-            }
-        }
-    }
-
-    isMain() { return this.main; }
-
-    toHtmlIcon() { return makeElementForSprite(this.icon); }
-
-    /**
-     * Return a list of Pokemon that composes this Pokemon
-     * Most of the time, it is this Pokemon.
-     * 
-     * "Unfuses" Kyurem, Necrozma, Calyrex and Infinite Fusion pokemons.
-     */
-    getIndividualSpecies() {
-        if (typeof this.content === 'string' || this.content instanceof String) {
-            return [this];
-        } else if (Array.isArray(this.specie)) {
-            let list = [];
-
-            for (let subPokemon of this.specie) {
-                let pkmn = {... this.content};
-                pkmn.specie = subPokemon;
-                list.push(new Pokemon(pkmn));
-            }
-
-            return list;
-        } else {
-            return [this];
-        }
-    }
+    getAllCurrentForms() { return this.components; }
+    getAllBaseForms()    { return this.components.map(x => Pokemon$.decompose(x)[0]).map(toBase); }
 }
 
 function newPokemon(dict, game) {
     if (dict.$ !== undefined) return new Pokemon$(dict, game);
-    else return new Pokemon(dict);
+    else throw Error("Invalid input");
 }
-
-
-
 
 // Populate the list
 
@@ -253,7 +182,7 @@ for (let game of games) {
 
     let content = {
         team: Object.keys(game.pokemons || {})
-                .map(key => newPokemon(game.pokemons[key], spriteKey))
+                .map(key => new Pokemon$(game.pokemons[key], spriteKey))
                 .filter(pokemon => pokemon.isMain())
                 .map(pokemon => pokemon.toHtmlIcon())
                 .join(''),
@@ -355,33 +284,22 @@ function addCount(icon, name, form, family, ignore_specie_name) {
 }
 
 function addTeamDict(title, team, game) {
-    let x = [];
+    let party = [];
+
     for (let pokemonSurname in team) {
-        let pkmn = newPokemon(team[pokemonSurname], game);
+        let pkmn = new Pokemon$(team[pokemonSurname], game);
 
-        if (pkmn instanceof Pokemon$) {
-            x.push(pkmn);
-        } else {
-            x.push({
-                toHtmlBattler: function() {
-                    return `<img src="image/${pkmn.battler}.png">`;
-                }
-            });
-        }
+        party.push(pkmn);
 
-        for (let specie of pkmn.getIndividualSpecies()) {
-            if (specie instanceof Pokemon$) {
-                addOne(countMergedForms, specie.getFamily()    , specie);
-                addOne(count           , specie.getFullSpecie(), specie);
-            } else {
-                let c = specie.content;
-                addCount(specie.icon, specie.specie, c.form, c.family, c.ignore_specie_name);
-            }
-        }
+        pkmn.getAllBaseForms()
+            .forEach(formName => addOne(countMergedForms, formName, pkmn));
+        
+        pkmn.getAllCurrentForms()
+            .forEach(formName => addOne(count           , formName, pkmn));
     }
 
     // Populates the teams table with an image of every pokemon of the team
-    app.addTeam({ title, party: x })
+    app.addTeam({ title, party })
 }
 
 function fillCounts() {
