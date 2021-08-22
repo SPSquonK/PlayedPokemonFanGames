@@ -111,6 +111,20 @@ const pokemons = {
             "Un poussin": "Combusken",
             "Yoga Girl": "Meditite",
             "Secret Box": "Hariyama"
+        },
+        Agathe: {
+            "Lapine": { $: "Cinderace" },
+            "Solrock": { $: "Solrock", main: false },
+            "Lunatone": { $: "Lunatone" },
+            "Girafe": { $: "Girafarig", main: false },
+            "Poney": { $: "Ponyta", main: false },
+            "Chien": { $: "Mightyena" },
+            "Chienne": { $: "Boltund" },
+            "Singe": { $: "Ambipom" },
+            "Mouton": { $: "Ampharos-Rejuvenian" },
+            // Licorne: Useless Alolan Rapidash (less usefull than the lv 56 Kantonian Ponyta)
+            // Crabe: Useless Rejuvenian Parasect
+            // Canard: Porygon Z that was used for one fight
         }
     },
     "Empyrean": {
@@ -474,4 +488,13 @@ const games = [
         pokemons: pokemons.SoulStone.KaineWest,
         path: "Soulstones/Soulstones_19_KaineWest_V2_0_1.rxdata"
     },
+    {
+        game: "Rejuvenation",
+        player: "Agathe",
+        version: "V13.0.4",
+        date: "2021-08",
+        pokemons: pokemons.Rejuvenation.Agathe,
+        path: "Rejuvenation_Agathe_V13.rxdata",
+        comments: "https://gist.github.com/SPSquonK/316ad4f3aad81bca3e18298fc67a861d"
+    }
 ];

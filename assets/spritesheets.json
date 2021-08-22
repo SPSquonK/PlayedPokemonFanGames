@@ -1730,5 +1730,113 @@
       "width": 32,
       "height": 32
     }
+  },
+  "Rejuvenation/Cinderace": {
+    "battler": {
+      "slot": 136,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 135,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Solrock": {
+    "battler": {
+      "slot": 137,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 136,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Lunatone": {
+    "battler": {
+      "slot": 138,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 137,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Girafarig": {
+    "battler": {
+      "slot": 139,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 138,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Ponyta": {
+    "battler": {
+      "slot": 140,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 139,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Mightyena": {
+    "battler": {
+      "slot": 141,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 140,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Boltund": {
+    "battler": {
+      "slot": 142,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 141,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Ambipom": {
+    "battler": {
+      "slot": 143,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 142,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Ampharos-Rejuvenian": {
+    "battler": {
+      "slot": 144,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 143,
+      "width": 32,
+      "height": 32
+    }
   }
 }

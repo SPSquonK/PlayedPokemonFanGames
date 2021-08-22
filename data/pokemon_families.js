@@ -1,10 +1,9 @@
-let families = {
-    // Gen 1
+const families = {
     "Venusaur": "Bulbasaur",
     "Charizard": "Charmander",
     "Blastoise": "Squirtle",
+    "Ponyta": "Ponyta",
     "Rapidash": "Ponyta",
-    "Spectrum": "Gastly",
     "Haunter": "Gastly",
     "Gengar": "Gastly",
     "Alakazam": "Abra",
@@ -27,8 +26,8 @@ let families = {
     "Rhydon": "Rhyhorn",
     "Rhyperior": "Rhyhorn",
 
-    "Magneton": "Magneti",
-    "Magnezone": "Magneti",
+    "Magneton": "Magnemite",
+    "Magnezone": "Magnemite",
 
     "Vaporeon": "Eevee",
     "Espeon": "Eevee",
@@ -39,7 +38,7 @@ let families = {
     "Zapdos": "Zapdos",
     "Mewtwo": "Mewtwo",
 
-    // Gen 2
+    
     "Typhlosion": "Cindaquil",
     "Feraligatr": "Totodile",
     "Ampharos": "Mareep",
@@ -52,10 +51,10 @@ let families = {
     "Honchkrow": "Murkrow",
     "Tyranitar": "Larvitar",
     "Ursaring": "Teddiursa",
+    "Ambipom": "Aipom",
 
     "Celebi": "Celebi",
 
-    // Gen 3
     "Sceptile": "Treecko",
     "Dusknoir": "Duskull",
     "Metagross": "Beldum",
@@ -65,8 +64,10 @@ let families = {
     "Flygon": "Trapinch",
     "Torkoal": "Torkoal",
     "Swellow": "Taillow",
+    "Lunatone": "Lunatone",
+    "Solrock": "Solrock",
+    "Mightyena": "Poochyena",
 
-    // Gen 4
     "Gastrodon": "Shellos",
     "Lucario": "Riolu",
     "Kricketune": "Kricketot",
@@ -81,7 +82,6 @@ let families = {
     "Altaradon": "Shellos",
 
 
-    // Gen 5
     "Serperior": "Snivy",
     "Cinccino": "Mincinno",
     "Galvantula": "Joltik",
@@ -96,33 +96,30 @@ let families = {
     "Swoobat": "Woobat",
     "Excadrill": "Drilbur",
 
-    // Gen 6
     "Delphox": "Fennekin",
     "Greninja": "Froakie",
     "Talonflame": "Fletchling",
     "Pangoro": "Pancham",
     "Zygarde": "Zygarde",
 
-    // Gen 7
     "Primarina": "Popplio",
     "Lycanroc": "Rockruff",
     "Goodra": "Goomy",
 
-    // Gen 8
     "Rillaboom": "Grookey",
     "Cinderace": "Scorbunny",
+    "Boltund": "Yamper",
 
-    // Empyrean
+
+
     "Averat": "Averat",
 
-    // Blue & White
     "Fircoon": "Fircoon",
     "Snowbreak": "Snopekor",
     "Halakik": "Halakik",
     "Zap Zap": "Zip zip",
     "Vespyre": "Kuheat",
 
-    // Solar Light & Lunar Dark
     "Salaslam": "Salatad",
     "Casspring": "Jumple",
     "Werehide": "Beopup",
