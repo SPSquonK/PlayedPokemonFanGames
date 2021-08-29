@@ -25,6 +25,8 @@ const families = {
     "Marowak": "Cubone",
     "Rhydon": "Rhyhorn",
     "Rhyperior": "Rhyhorn",
+    "Pinsir": "Pinsir",
+    "Sandslash": "Sandshrew",
 
     "Magneton": "Magnemite",
     "Magnezone": "Magnemite",
@@ -67,12 +69,14 @@ const families = {
     "Lunatone": "Lunatone",
     "Solrock": "Solrock",
     "Mightyena": "Poochyena",
+    "Obstagoon": "Zigzagoon",
 
     "Gastrodon": "Shellos",
     "Lucario": "Riolu",
     "Kricketune": "Kricketot",
     "Manaphy": "Manaphy",
     "Rotom": "Rotom",
+    "Empoleon": "Piplup",
 
     "Gastronite": "Shellos",
     "Gastrampa": "Shellos",

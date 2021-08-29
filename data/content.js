@@ -125,6 +125,14 @@ const pokemons = {
             // Licorne: Useless Alolan Rapidash (less usefull than the lv 56 Kantonian Ponyta)
             // Crabe: Useless Rejuvenian Parasect
             // Canard: Porygon Z that was used for one fight
+        },
+        Kenny: {
+            "The Penguin": { $: "Empoleon" },
+            "The Hedgehog": { $: "Sandslash" },
+            "The Hamster": { $: "Nidoking" },
+            "The Furret": { $: "Obstagoon" },
+            "The Beetle": { $: "Pinsir" /* barely main */ },
+            "The Weasel": { $: "Typhlosion" }
         }
     },
     "Empyrean": {
@@ -330,6 +338,7 @@ const games = [
         version: "V12",
         date: "2020-07",
         player: "Anna",
+        note: "good ending but probably murdered Garbodor and Hippowdon",
         path: "Rejuvenation_Anna.rxdata",
         comments: "https://gist.github.com/SPSquonK/2a010fd6448cf80c72df3e838b34cde3#file-pokemonrejuvenation-md",
         living_dex: "Available - Magby+",
@@ -340,6 +349,7 @@ const games = [
         version: "V12",
         date: "2020-08",
         player: "Lillia",
+        note: "100% good ending V12",
         path: "Rejuvenation_Lillia.rxdata",
         living_dex: "Shared",
         pokemons: pokemons.Rejuvenation.Lillia
@@ -491,10 +501,20 @@ const games = [
     {
         game: "Rejuvenation",
         player: "Agathe",
+        note: "good ending almost 100% v13",
         version: "V13.0.4",
         date: "2021-08",
         pokemons: pokemons.Rejuvenation.Agathe,
         path: "Rejuvenation_Agathe_V13.rxdata",
         comments: "https://gist.github.com/SPSquonK/316ad4f3aad81bca3e18298fc67a861d"
+    },
+    {
+        game: "Rejuvenation",
+        player: "Kenny",
+        version: "V13.0.5",
+        date: "2021-08",
+        note: "Joined Kieran and Clear",
+        pokemons: pokemons.Rejuvenation.Kenny,
+        path: "Rejuvenation_Kenny.rxdata"
     }
 ];

@@ -1838,5 +1838,53 @@
       "width": 32,
       "height": 32
     }
+  },
+  "Rejuvenation/Empoleon": {
+    "battler": {
+      "slot": 145,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 144,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Sandslash": {
+    "battler": {
+      "slot": 146,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 145,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Obstagoon": {
+    "battler": {
+      "slot": 147,
+      "width": 96,
+      "height": 96
+    },
+    "icon": {
+      "slot": 146,
+      "width": 32,
+      "height": 32
+    }
+  },
+  "Rejuvenation/Pinsir": {
+    "battler": {
+      "slot": 148,
+      "width": 80,
+      "height": 80
+    },
+    "icon": {
+      "slot": 147,
+      "width": 32,
+      "height": 32
+    }
   }
 }
